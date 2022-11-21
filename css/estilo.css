@@ -1,0 +1,305 @@
+*{margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body{
+    background-color: #010309;  
+    color: #ffffff;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-weight:bold;
+    font-size:35px;
+    margin:5px 30px;
+    padding: 1px;
+    text-align:left;
+}
+h3{
+    font-family: 'Calligraffitti', cursive;
+    font-size: 2rem;
+   letter-spacing: 2px;
+}
+h2{
+    font-family: 'Shalimar', cursive;
+    font-size: 40px;
+    word-spacing:8px;
+    letter-spacing: 2px;
+}
+p{
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    line-height: 1.8;
+}
+/* INICIO Home & mediaqueries */
+.home{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0,3 fr 1fr 1 fr 1fr 0,3fr;
+    grid-template-areas: 
+    "header header header header header"
+    "main main main main main"
+    ". section1 section1 section1 ."
+    "section2 section2 section2 section2 section2"
+    "footer footer footer footer footer";
+}
+@media screen and (max-width:768px){
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "header header header header"
+        "main main main main"
+    "section1 section1 section1 section1"
+    "section2 section2 section2 section2"
+    "footer footer footer footer ";}
+    .header{flex-direction: column;
+        align-items: center;}
+    .main{
+        grid-area: main;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: none;
+    }
+    .vidHome{
+        width: 420px;
+        height: 236px;
+    }
+    }
+    @media screen and (max-width:600px){.container {grid-template-columns: 1fr;grid-template-areas:"header"
+        "main"
+        "section1"
+        "section2"
+        "footer ";}
+         .header{flex-direction: column;
+        align-items: center;}}
+/* FIN Home & mediaqueries */
+
+/* INIICIO HEADER/NAV */
+.header{
+    grid-area: header;
+    background-color: #010104;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    align-self: center;
+}
+.header img{
+    width: 300px;
+    margin-left:1rem
+}
+.header ul{
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+}
+.header ul li{
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Over the Rainbow', cursive;
+}
+header ul li a{
+    color: white;
+    text-decoration: none;
+}
+.header ul li a:hover{
+    color: #042da8;  
+}
+/* FIN HEADER/NAV */
+/* INICIO MAIN HOME*/
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.main__banner{
+    height: 700px;
+    background-image: url(../assets/img/nikiperformingguitar.jpg );
+    background-attachment:fixed;
+    background-position: 20%50%;
+    background-repeat: no-repeat;
+}
+.main__div{
+    width: 50rem;
+    height: 18.75rem;
+    text-align: center;
+    margin: 2rem;
+}
+.main__intro{
+    font-size: 35px;
+    font-weight:semibold;
+    letter-spacing: 1px;
+    padding:2rem;
+    font-family: 'Caveat', cursive;
+}
+/* FIN MAIN HOME*/
+
+/* INICIO Section1 Home */
+.section1{
+    grid-area: section1;
+    margin-top: 2rem;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* FIN Section1 Home */
+
+/* INICIO Section2 Home */
+.section2{
+    grid-area: section2;
+    display: flex;
+    justify-content: space-around;
+}
+/* FIN Section2 Home */
+
+/* .header img */
+
+.cards{
+    background-color: rgb(248, 245, 241);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 5%;
+    color: #010a07;
+    text-align: center;
+}
+
+
+/* INICIO Discography */
+.container2{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0,3 fr 1fr 1 fr 1fr 0,3fr;
+    grid-template-areas:
+    "header header header"
+    "newAlbum newAlbum newAlbum"
+    "disco disco disco"
+    "disco disco disco"
+    "footer footer footer ";
+}
+.newAlbum{
+    height: 500px;
+    grid-area: newAlbum;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(239, 225, 207);
+    color: #010510;
+}
+.newAlbum__cap{
+    width: 800px;
+    padding: 1rem;
+    margin:1rem;
+    text-align: justify;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.newAlbum__img{
+    margin:5px;
+    border: solid rgba(0, 0, 0, 0.356) 1px;
+    width: 20%;
+    height: auto;
+}
+.disco{
+    grid-area: disco;
+    display: flex;
+    flex-direction: column;
+}
+.disco__divRight{
+    align-self: flex-start;
+    background-color: rgb(255, 252, 247);
+    width: 60rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem
+}
+.disco__divLeft{
+    align-self: flex-end;
+    width: 500px;
+    background-color: rgb(255, 252, 247);
+    width: 60rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem
+}
+.imgDisco{
+    width: 12rem;
+    margin:5px;
+    padding:10px;
+}
+.disco__cap{
+    color: #010510;
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 1rem;
+    line-height: 1.2;
+
+}
+
+/* INICIO JOURNEY */
+.bannerJourn{
+    background-image: url(../assets/img/nikihighschool.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+    padding:30px;
+    margin:auto;
+    color:#010a07
+}
+
+/* INICIO FOOTER */
+.footer{
+    grid-area: footer;
+}
+footer{
+    padding: 20px;
+    border-top:solid 1px white;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+}
+.footerItem{
+
+    width: 200px;
+    padding: 25px;
+    margin:20px;
+    font-family: 'Shalimar', cursive;
+    font-size: 30px;
+    word-spacing:8px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.footer__logo{
+    width: 60px;
+    padding: 0.5rem;
+
+}
+footer a{
+    text-decoration: none;
+}
+footer ul{
+    display:inline-block
+}
+footer ul li{
+    list-style-type: none;
+
+}
+/* FIN FOOTER */
+
+
+/* MEDIAQUERIES */
+
+       
+
