@@ -305,6 +305,10 @@ header ul li a{
 /* FIN Gallery */
 
 /* INICIO Fanclub */
+.fanclub{
+display: flex;
+justify-content: center;
+}
 .fanclub__form{
     width: 500px;
 }
