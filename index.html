@@ -18,16 +18,31 @@
    <div class="home">
         <!-- INICIO HEADER -->
         <header class="header">
-            <img class="logo" src="./assets/img/nikilogo2.png "></img>
-            <nav>
-                <ul>
-                    <li><a href=index.html>Home</a></li>
-                    <li><a href="views/disco.html"> Discography</li></a>
-                    <li><a href="views/journ.html">Journey</a></li>
-                    <li><a href="views/gallery.html">Gallery</a></li>
-                    <li><a href="views/fc.html">Fanclub</a></li>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-dark navbar-expand-lg  navi">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html"><img src="./assets/img/nikilogo2.png" class="logo" alt="Niki logo"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                      <li class="nav-item menu__item">
+                        <a class="nav-link active menu__link" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item menu__item">
+                        <a class="nav-link active menu__link" aria-current="page" href="./views/disco.html">Discography</a>
+                      </li><li class="nav-item menu__item">
+                        <a class="nav-link active menu__link" aria-current="page" href="./views/journ.html">Journey</a>
+                      </li><li class="nav-item menu__item">
+                        <a class="nav-link active menu__link" aria-current="page" href="./views/gallery.html">Gallery</a>
+                      </li><li class="nav-item menu__item">
+                        <a class="nav-link active menu__link" aria-current="page" href="./views/fc.html">Fanclub
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                </div>
+              </nav>
         </header>
         <!-- FIN HEADER -->
         <main class="main main__banner">
@@ -45,11 +60,10 @@
             </div>
         </section>
         <section class="section2">
-            <div class="cards"><img src="" alt=""></div>
-            <div class="cards"><img src="" alt=""></div>
-            <div class="cards"><img src="" alt=""></div>
-            <div class="cards"><img src="" alt=""></div>
-            <!--Etiqueta para utilizar, donde irán "tarjetas" con las diferentes secciones-->
+            <img class="cards" src="./assets/img/nikibanner5.jpg" alt="Discography image">
+            <img class="cards" src="./assets/img/nikiatthebeach.jpg " alt="Journey image">
+            <img class="cards" src="./assets/img/nikijourney.jpg" alt="Gallery image">
+            <img class="cards" src="./assets/img/nikiwithfans.jpg " alt="Fanclub image">
         </section>
         <!-- INICIO FOOTER -->
         <footer class="footer">

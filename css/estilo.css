@@ -27,7 +27,7 @@ p{
 .home{
     display:grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 0,3 fr 1fr 1 fr 1fr 0,3fr;
+    grid-template-rows: 0,3 fr 2fr 2 fr 1fr 0,3fr;
     grid-template-areas: 
     "header header header header header"
     "main main main main main"
@@ -37,7 +37,7 @@ p{
 }
 @media screen and (max-width:768px){
     .container{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
         "header header header header"
         "main main main main"
@@ -75,31 +75,29 @@ p{
     display: flex;
     justify-content: space-between;
 }
-nav{
-    align-self: center;
+.navi{
+    background-color: #010104;
+
 }
 .logo{
     width: 300px;
-    margin-left:1rem
+    margin-left:1rem;
 }
-.header ul{
-    display: flex;
+.menu{
     list-style-type: none;
     padding: 10px;
 }
-.header ul li{
+
+.menu__item{
     margin: 1rem;
     padding: 0.5rem;
     font-size: 2rem;
-    font-family: 'Over the Rainbow', cursive;
-}
-header ul li a{
     color: white;
-    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
 }
-.header ul li a:hover{
-    color: #042da8;  
-}
+.navbar-nav li a:hover{
+    color: #042da8 !important;
+  }
 /* FIN HEADER/NAV */
 
 /* INICIO MAIN HOME*/
@@ -142,6 +140,7 @@ header ul li a{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border-bottom: solid white 1px;
 }
 .section1 h3{
     font-family: 'Calligraffitti', cursive;
@@ -166,6 +165,7 @@ header ul li a{
     font-size: 25px;
     padding: 2rem;
     margin:1rem;
+    
 }
 /* FIN Section1 Home */
 
@@ -173,19 +173,17 @@ header ul li a{
 .section2{
     grid-area: section2;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 /* FIN Section2 Home */
 
 /* .header img */
 
 .cards{
-    background-color: rgb(248, 245, 241);
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 5%;
-    color: #010a07;
-    text-align: center;
+    margin: 1rem;
+    width: 20%;
+    height: auto;
+    border-radius: 30px;
 }
 
 
@@ -276,19 +274,10 @@ header ul li a{
     margin:auto;
     color:#010a07
 }
-/* INICIO Gallery */
-.gallery__banner{
-    background-image: url(../assets/img/nikibanner4.jpg);
-    background-attachment:fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:600px;
-    padding:30px;
-    margin:auto;
-    margin-bottom: 2rem;
-    color:#010a07
+.imgJourney{
+    border-radius: 30px;
 }
+/* INICIO Gallery */
 .gallery{
     display:flex;
     flex-direction: row;
@@ -297,7 +286,7 @@ header ul li a{
 }
 
 .gallery__img{
-    width: 350px;
+    width: 400px;
 }
 .gallery__div{
     margin: 20px;
@@ -350,7 +339,8 @@ footer a{
 }
 .labelLogo{
     width: 50px;;
-    height:50px
+    height:50px;
+    border-radius: 10%;
 }
 
 /* FIN FOOTER */
