@@ -93,7 +93,7 @@ p{
     padding: 0.5rem;
     font-size: 2rem;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Over the Rainbow', cursive;
 }
 .navbar-nav li a:hover{
     color: #042da8 !important;
@@ -137,10 +137,12 @@ p{
     padding:2rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     border-bottom: solid white 1px;
+}
+.section1__div{
+    display: flex;
+    align-items: center;
 }
 .section1 h3{
     font-family: 'Calligraffitti', cursive;
@@ -148,11 +150,6 @@ p{
    letter-spacing: 2px;
    padding: 1rem;
    margin:1rem
-}
-.section1__div{
-    display: flex;
-    align-items: center;
-    
 }
 .section1 iframe{
     padding: 2rem;
@@ -162,7 +159,7 @@ p{
     width:600px;
     font-family: 'La Belle Aurore', cursive;
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
     padding: 2rem;
     margin:1rem;
     
@@ -287,6 +284,9 @@ p{
 
 .gallery__img{
     width: 400px;
+}
+.gallery img hover{
+    transform: scale(3,3);
 }
 .gallery__div{
     margin: 20px;
