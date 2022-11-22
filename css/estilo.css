@@ -6,24 +6,17 @@ body{
     background-color: #010309;  
     color: #ffffff;
 }
-h1{
-    font-family: 'Dancing Script', cursive;
-    font-weight:bold;
-    font-size:35px;
-    margin:5px 30px;
-    padding: 1px;
-    text-align:left;
-}
 h3{
     font-family: 'Calligraffitti', cursive;
     font-size: 2rem;
    letter-spacing: 2px;
 }
-h2{
-    font-family: 'Shalimar', cursive;
-    font-size: 40px;
+h4{
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 20px;
     word-spacing:8px;
     letter-spacing: 2px;
+    text-align: center;
 }
 p{
     font-family: 'Caveat', cursive;
@@ -38,7 +31,7 @@ p{
     grid-template-areas: 
     "header header header header header"
     "main main main main main"
-    ". section1 section1 section1 ."
+    "section1 section1 section1 section1 section1"
     "section2 section2 section2 section2 section2"
     "footer footer footer footer footer";
 }
@@ -85,7 +78,7 @@ p{
 nav{
     align-self: center;
 }
-.header img{
+.logo{
     width: 300px;
     margin-left:1rem
 }
@@ -108,6 +101,7 @@ header ul li a{
     color: #042da8;  
 }
 /* FIN HEADER/NAV */
+
 /* INICIO MAIN HOME*/
 .main{
     grid-area: main;
@@ -123,17 +117,18 @@ header ul li a{
     background-repeat: no-repeat;
 }
 .main__div{
-    width: 50rem;
+    width: 60rem;
     height: 18.75rem;
-    text-align: center;
     margin: 2rem;
 }
 .main__intro{
-    font-size: 35px;
+    font-size: 30px;
     font-weight:semibold;
+    text-align: center;
     letter-spacing: 1px;
     padding:2rem;
-    font-family: 'Caveat', cursive;
+    font-family: 'La Belle Aurore', cursive;
+
 }
 /* FIN MAIN HOME*/
 
@@ -147,6 +142,30 @@ header ul li a{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.section1 h3{
+    font-family: 'Calligraffitti', cursive;
+    font-size: 30x;
+   letter-spacing: 2px;
+   padding: 1rem;
+   margin:1rem
+}
+.section1__div{
+    display: flex;
+    align-items: center;
+    
+}
+.section1 iframe{
+    padding: 2rem;
+    margin: 1rem;
+}
+.section1__p{
+    width:600px;
+    font-family: 'La Belle Aurore', cursive;
+    text-align: center;
+    font-size: 25px;
+    padding: 2rem;
+    margin:1rem;
 }
 /* FIN Section1 Home */
 
@@ -257,12 +276,55 @@ header ul li a{
     margin:auto;
     color:#010a07
 }
+/* INICIO Gallery */
+.gallery__banner{
+    background-image: url(../assets/img/nikibanner4.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+    padding:30px;
+    margin:auto;
+    margin-bottom: 2rem;
+    color:#010a07
+}
+.gallery{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+
+.gallery__img{
+    width: 350px;
+}
+.gallery__div{
+    margin: 20px;
+}
+/* FIN Gallery */
+
+/* INICIO Fanclub */
+.fanclub__form{
+    width: 500px;
+}
+.fanclub__submit{
+    background-color:rgb(255, 252, 247);
+    font-family: 'Over the Rainbow', cursive;
+    width: 5rem;
+}
+.formItem{
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 20px;
+}
+/* FIN Fanclub */
 
 /* INICIO FOOTER */
 .footer{
     grid-area: footer;
 }
 footer{
+    background-color:#010104;
     padding: 20px;
     border-top:solid 1px white;
     display:flex;
@@ -270,32 +332,23 @@ footer{
     flex-wrap: nowrap;
     justify-content:space-evenly;
 }
-.footerItem{
-
-    width: 200px;
-    padding: 25px;
-    margin:20px;
-    font-family: 'Shalimar', cursive;
-    font-size: 30px;
-    word-spacing:8px;
-    letter-spacing: 2px;
-    text-align: center;
-}
-.footer__logo{
-    width: 60px;
-    padding: 0.5rem;
-
-}
 footer a{
     text-decoration: none;
 }
-footer ul{
-    display:inline-block
+.footer__logo{
+    width: 50px;
+    padding: 0.5rem;
 }
-footer ul li{
-    list-style-type: none;
+.label{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.labelLogo{
+    width: 50px;;
+    height:50px
+}
 
-}
 /* FIN FOOTER */
 
 
