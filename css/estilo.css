@@ -23,7 +23,7 @@ p{
     font-size: 20px;
     line-height: 1.8;
 }
-/* INICIO Home & mediaqueries */
+/* INICIO Home*/
 .home{
     display:grid;
     grid-template-columns: repeat(5, 1fr);
@@ -35,49 +35,15 @@ p{
     "section2 section2 section2 section2 section2"
     "footer footer footer footer footer";
 }
-@media screen and (max-width:768px){
-    .container{
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-areas:
-        "header header header header"
-        "main main main main"
-    "section1 section1 section1 section1"
-    "section2 section2 section2 section2"
-    "footer footer footer footer ";}
-    .header{flex-direction: column;
-        align-items: center;}
-    .main{
-        grid-area: main;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background-image: none;
-    }
-    .vidHome{
-        width: 420px;
-        height: 236px;
-    }
-    }
-    @media screen and (max-width:600px){.container {grid-template-columns: 1fr;grid-template-areas:"header"
-        "main"
-        "section1"
-        "section2"
-        "footer ";}
-         .header{flex-direction: column;
-        align-items: center;}}
-/* FIN Home & mediaqueries */
 
 /* INIICIO HEADER/NAV */
 .header{
     grid-area: header;
     background-color: #010104;
-    color: white;
-    display: flex;
-    justify-content: space-between;
+    color: white; 
 }
 .navi{
     background-color: #010104;
-
 }
 .logo{
     width: 300px;
@@ -87,7 +53,6 @@ p{
     list-style-type: none;
     padding: 10px;
 }
-
 .menu__item{
     margin: 1rem;
     padding: 0.5rem;
@@ -98,6 +63,33 @@ p{
 .navbar-nav li a:hover{
     color: #042da8 !important;
   }
+
+  /* NAVBAR SIN BOOTRSTRAP */
+.header2{
+    display: flex;
+    justify-content: space-between;
+  }
+.header2 nav{
+    align-self: center;
+}
+.header2 ul{
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+}
+.header2 ul li{
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Over the Rainbow', cursive;
+}
+.header2 ul li a{
+    color: white;
+    text-decoration: none;
+}
+.header2 ul li a:hover{
+    color: #042da8;  
+}
 /* FIN HEADER/NAV */
 
 /* INICIO MAIN HOME*/
@@ -148,8 +140,6 @@ p{
     font-family: 'Calligraffitti', cursive;
     font-size: 30x;
    letter-spacing: 2px;
-   padding: 1rem;
-   margin:1rem
 }
 .section1 iframe{
     padding: 2rem;
@@ -177,68 +167,164 @@ p{
 /* .header img */
 
 .cards{
-    margin: 1rem;
     width: 20%;
     height: auto;
     border-radius: 30px;
 }
+/* INICIO Home mediaqueries */
 
+@media screen and (max-width:768px){
+    .container{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+        "header header header header"
+        "main main main main"
+    "section1 section1 section1 section1"
+    "section2 section2 section2 section2"
+    "footer footer footer footer ";}
+    .header{flex-direction: column;
+        align-items: center;}
+    .main{
+        grid-area: main;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: none;
+    }
+    .vidHome{
+        width: 420px;
+        height: 236px;
+    }
+    }
+    @media screen and (max-width:480px){
+        .container {grid-template-columns: 1fr;grid-template-areas:"header"
+        "main"
+        "section1"
+        "section2"
+        "footer ";}
+        .main__banner{
+            background-image:url(../assets/img/nikiperformingguitar.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .main__div{
+            background-color: #0101048a;
+            width: 416px;
+            height: 550px;
+        }
+        .section1{
+            display: flex;
+            flex-direction: column;
+        }
+        .section1__div{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .vidHome{
+            width: 168px;
+            height: 94.4px;
+    }
+        .section1 h3{
+            width:4git status00px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .section1__p{
+            width: 500px;
+            font-size: 23px;
+        }
+}
+        
+/* FIN Home mediaqueries */
 
 /* INICIO Discography */
+/* GRID */
 .container2{
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 0,3 fr 1fr 1 fr 1fr 0,3fr;
     grid-template-areas:
     "header header header"
-    "newAlbum newAlbum newAlbum"
+    "newAlbum newAlbum newAlbumImg"
     "disco disco disco"
     "disco disco disco"
     "footer footer footer ";
 }
+/* FIN GRID */
+
+
 .newAlbum{
-    height: 500px;
     grid-area: newAlbum;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     background-color: rgb(239, 225, 207);
     color: #010510;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+.newAlbum__title{
+    font-family:'Over the Rainbow', cursive;
+    font-weight: bold;
+    text-align: center;
+
 }
 .newAlbum__cap{
-    width: 800px;
+    text-align: center;
     padding: 1rem;
     margin:1rem;
-    text-align: justify;
+    text-align: center;
     font-size: 2rem;
     line-height: 1.2;
+    font-family: 'La Belle Aurore', cursive;
 }
-.newAlbum__img{
-    margin:5px;
-    border: solid rgba(0, 0, 0, 0.356) 1px;
-    width: 20%;
-    height: auto;
+.newAlbum__cap2{
+    text-align: center;
+    padding: 1rem;
+    margin:1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Over the Rainbow', cursive;
+}
+.newAlbumImg{
+    grid-area: newAlbumImg;
+    background-color:rgb(239, 225, 207);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.newAlbumImg img{
+    width:400px;
+    height:400px
 }
 .disco{
     grid-area: disco;
     display: flex;
     flex-direction: column;
 }
-.disco__divRight{
-    align-self: flex-start;
-    background-color: rgb(255, 252, 247);
-    width: 60rem;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem
+.disco h2{
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 3rem;
+    text-align: center;
+   letter-spacing: 2px;
+   font-weight: bold;
+   align-self: center;
 }
-.disco__divLeft{
-    align-self: flex-end;
-    width: 500px;
+.disco__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.disco__div{
     background-color: rgb(255, 252, 247);
-    width: 60rem;
+    width: 35rem;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -258,7 +344,46 @@ p{
     line-height: 1.2;
 
 }
-
+/* MEDIAQUERRIE */
+@media screen and (max-width:480px){
+    .container2{grid-template-columns: 1fr;
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "newAlbum"
+        "newAlbumImg"
+        "disco"
+        "disco"
+        "footer ";
+    }
+    .newAlbum{
+        background-color: #010510;
+        color: white 
+    }
+    .newAlbum__title{
+        font-family:'Over the Rainbow', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size:2rem;
+        margin:3rem 3rem 0rem 3rem
+    }
+    .newAlbum__cap{
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 1rem;
+        margin:1rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: 'La Belle Aurore', cursive;
+}
+.newAlbumImg{
+    background-color: #010510;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+}
+/* FIN MEDIAQUERIE */
 /* INICIO JOURNEY */
 .bannerJourn{
     background-image: url(../assets/img/nikihighschool.jpg);
@@ -283,10 +408,10 @@ p{
 }
 
 .gallery__img{
-    width: 400px;
+    width: 500px;
 }
-.gallery img hover{
-    transform: scale(3,3);
+.gallery__img:hover{
+    transform: scale(1.5,1.5);
 }
 .gallery__div{
     margin: 20px;
