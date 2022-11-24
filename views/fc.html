@@ -5,77 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> NIKI's official fanclub </title>
+    <link rel="shortcut icon" href="../assets/img/favicon-32x32.png">
      <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <!-- Fin Bootstrap -->
+<!-- AOS Animacion -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Fin AOS -->
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Caveat:wght@400;600;700&family=Dancing+Script:wght@400;700&family=Indie+Flower&family=La+Belle+Aurore&family=Nothing+You+Could+Do&family=Over+the+Rainbow&family=Parisienne&display=swap" rel="stylesheet">
 </head>
 <body>
-     <!-- INICIO HEADER -->
-    <header class="header2">
-        <img class="logo" src="../assets/img/nikilogo2.png "></img>
-        <nav>
-            <ul class="menu">
-                <li><a href=../index.html>Home</a></li>
-                <li> <a href="disco.html"> Discography</a></li>
-                <li><a href="journ.html">Journey</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="fc.html">Fanclub</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- FIN HEADER -->
-    <div class="bannerFan"></div>
-    <main class="fanclub">
-        <form class="fanclub__form m-5 p-3">
-            <div class="mb-3">
-                <label for="name" class="form-label formItem">Name:</label>
-                    <input type="text" class="form-control" id="name">
-            </div>
-            <div class="mb-3">
-                <label for="surn" class="form-label formItem" >Surname:</label>
-                    <input type="text" class="form-control" id="surn">
-            </div>
-            <div class="mb-3">
-                <label for="mail" class="form-label formItem">Email address</label>
-                    <input type="email" class="form-control" id="mail" aria-describedby="email">
-            <div id="email" class="formItem p-2">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="pass" class="form-label formItem">Password</label>
-              <input type="password" class="form-control" id="pass">
-            </div>
-            <button type="submit" class="btn fanclub__submit"><strong>Submit</stron></button>
-          </form>
-    </main>
-    <!-- INICIO FOOTER -->
-    <footer class="footer">
-        <div class="socialmedia"><h4 class="socialmedia__cap"> <h4>Social Media</h4>
-            <a href="https://www.instagram.com/nikizefanya/" target="_blank">
-                <img class="footer__logo" src="../assets/img/logos/instagram_logo.png" alt="intagram logo">
-            </a>
-            <a href="https://www.facebook.com/NIKIZefanya" target="_blank">
-                <img class="footer__logo" src="../assets/img/logos/facebook_logo.png" alt="facebook logo">
-            </a>
-            <a href="https://twitter.com/nikizefanya" target="_blank">
-                <img class="footer__logo" src="../assets/img/logos/twitter_logo.png" alt="twitter logo">
-            </a>
-            <a href="https://www.youtube.com/channel/UCaAWRu53UW815hGTmxvHFbA" target="_blank">
-                <img class="footer__logo" src="../assets/img/logos/youtube_logo.png" alt="youtube logo">
-            </a>
-        </div>
-        <div class="label">
-            <h4>Niki's label agency</h4>
-            <div class="label__div">
-                <a href="https://88rising.com/" target="_blank"><img class="labelLogo" src="../assets/img/logos/rising88_logo.jpg" alt="88rising logo"></a>
-        </div>
-    </footer>
-    <!-- FIN FOOTER -->
+<div class="fanclub">
+         <!-- INICIO HEADER -->
+        <header class="header2">
+            <img class="logo" src="../assets/img/nikilogo2.png "></img>
+            <nav>
+                <ul class="menu">
+                    <li><a href=../index.html>Home</a></li>
+                    <li> <a href="disco.html"> Discography</a></li>
+                    <li><a href="journ.html">Journey</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="fc.html">Fanclub</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- FIN HEADER -->
+            <main class="fcmain">
+                <div class="fc__div">
+                    <h1>Be part of Niki's official fanclub</h1>
+                    <p>Join Niki's fanclub and enjoy exclusive benefits</p>
+                </div>
+                <form class="fanclub__form m-5 p-3">
+                    <div class="mb-3">
+                        <label for="name" class="form-label formItem">Name:</label>
+                            <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="surn" class="form-label formItem" >Surname:</label>
+                            <input type="text" class="form-control" id="surn">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail" class="form-label formItem">Email address</label>
+                            <input type="email" class="form-control" id="mail" aria-describedby="email">
+                    <div id="email" class="formItem p-2">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="pass" class="form-label formItem">Password</label>
+                      <input type="password" class="form-control" id="pass">
+                    </div>
+                    <button type="submit" class="btn fanclub__submit"><strong>Submit</strong></button>
+                  </form>
+                </main>
+                <section class="sec1fc">
+                    <img src="../assets/img/fanclub1.jpg" alt="" class="fc__img" data-aos="fade-zoom-in"
+                    data-aos-duration="3000">
+                    <p class="fc__p">Have access to exclusive merch and discounts. You will also be notified about re-stocks and new merch launches!</p>
+                </section>
+                <section class="sec2fc">
+                    <p class="fc__p">Be the first to know when tickets go out for sale, where and how to get them. With your membership. you will get discounts for tickets as well!  </p>
+                    <img src="../assets/img/fanclub2.jpg" alt="" class="fc__img m-3" data-aos="fade-zoom-in"
+                    data-aos-duration="3000">
+                </section>
+                <footer class="footer">
+                    <div class="socialmedia"><h4 class="socialmedia__cap"> <h4>Social Media</h4>
+                        <a href="https://www.instagram.com/nikizefanya/" target="_blank">
+                            <img class="footer__logo" src="../assets/img/logos/instagram_logo.png" alt="intagram logo">
+                        </a>
+                        <a href="https://www.facebook.com/NIKIZefanya" target="_blank">
+                            <img class="footer__logo" src="../assets/img/logos/facebook_logo.png" alt="facebook logo">
+                        </a>
+                        <a href="https://twitter.com/nikizefanya" target="_blank">
+                            <img class="footer__logo" src="../assets/img/logos/twitter_logo.png" alt="twitter logo">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCaAWRu53UW815hGTmxvHFbA" target="_blank">
+                            <img class="footer__logo" src="../assets/img/logos/youtube_logo.png" alt="youtube logo">
+                        </a>
+                    </div>
+                    <div class="label">
+                        <h4>Niki's label agency</h4>
+                        <div class="label__div">
+                            <a href="https://88rising.com/" target="_blank"><img class="labelLogo" src="../assets/img/logos/rising88_logo.jpg" alt="88rising logo"></a>
+                    </div>
+                </footer>
+</div>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <!-- Fin Js -->
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- AOS -->
 </body>
 </html>

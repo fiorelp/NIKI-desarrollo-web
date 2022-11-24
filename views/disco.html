@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> NIKI's discography - Official website </title>
+    <link rel="shortcut icon" href="../assets/img/favicon-32x32.png">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <!-- Fin Bootstrap -->
+<!-- AOS Animacion -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Fin AOS -->
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,8 +50,11 @@
     <!-- INICIO MAIN -->
     <main class="newAlbum">
         <div class="newAlbum__div">
-            <h2 class="newAlbum__title">Niki's new album "Nicole" is out now </h2>
-            <p class="newAlbum__cap">"Nicole" as some kind of sonic time capsule explores heartache and dettachment, originally bottled in the prime of adolescence and now remastered via Niki's grown-up chops as writer, musician, and producer.</p>
+            <h2 class="newAlbum__title">Niki's new album "Nicole" is <strong>out now</strong> </h2>
+            <p class="newAlbum__cap" data-aos="fade-zoom-in"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-back"
+           >"Nicole" as some kind of sonic time capsule explores heartache and dettachment, originally bottled in the prime of adolescence and now remastered via Niki's grown-up chops as writer, musician, and producer.</p>
             <p class="newAlbum__cap2">12 songs. Some archived, some never released and a few brand new ones.</p>
             <p class="newAlbum__cap2">Listen now on streaming platforms.</p>
         </div>
@@ -58,28 +65,49 @@
     <section class="disco">
         <h2 class="p-3 m-3">Check out Niki's full discography</h2>
         <div class="disco__container">
-            <div class="disco__div">
+            <div class="disco__div" data-aos="zoom-in">
                 <img class="imgDisco" src="../assets/img/disco/single_seeunever.jpg" alt="single cover">
-                    <p class="disco__cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, omnis. Praesentium accusantium necessitatibus ab velit. Repellendus, eos! Quae, nobis iste corrupti vitae ipsa saepe consequatur modi quaerat! </p>
+                <div class="disco__indiv">
+                    <p class="disco__title">See U never</p>
+                        <p class="disco__cap">Niki's very first <strong>single.</strong></p>
+                </div>
             </div>
-                <div class="disco__div">
-                    <p class="disco__cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, omnis. Praesentium accusantium necessitatibus ab velit. Repellendus, eos! Quae, nobis iste corrupti vitae ipsa saepe consequatur modi quaerat!</p>
+                <div class="disco__div" data-aos="zoom-in">
+                    <div class="disco__indiv">
+                        <p class="disco__title">Zephyr</p>
+                            <p class="disco__cap">1st EP</p>
+                    </div>
                 <img class="imgDisco" src="../assets/img/disco/album_zephyr.jpg" alt="album cover">
                 </div>
-            <div class="disco__div">
+            <div class="disco__div" data-aos="zoom-in">
                 <img class="imgDisco" src="../assets/img/disco/single_lowkey.jpg" alt="single cover">
-                    <p class="disco__cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, omnis. Praesentium accusantium necessitatibus ab velit. Repellendus, eos! Quae, nobis iste corrupti vitae ipsa saepe consequatur modi quaerat!</p>
+                <div class="disco__indiv">
+                    <p class="disco__title">lowkey</p>
+                        <p class="disco__cap">Single</p>
+                </div>
             </div>
-                <div class="disco__div">
-                    <p class="disco__cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, omnis. Praesentium accusantium necessitatibus ab velit. Repellendus, eos! Quae, nobis iste corrupti vitae ipsa saepe consequatur modi quaerat!</p>
+                <div class="disco__div" data-aos="zoom-in">
+                    <div class="disco__indiv">
+                        <p class="disco__title">wanna take this downtown?</p>
+                            <p class="disco__cap">2nd EP</p>
+                    </div>
                 <img class="imgDisco" src="../assets/img/disco/ep_downton.jpg" alt="ep cover">
                 </div>
-           <div class="disco__div">
+           <div class="disco__div" data-aos="zoom-in">
                 <img class="imgDisco" src="../assets/img/disco/album_moonchild.jpg" alt="album cover moonchild">
-                    <p class="disco__cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, omnis. Praesentium accusantium necessitatibus ab velit. Repellendus, eos! Quae, nobis iste corrupti vitae ipsa saepe consequatur modi quaerat!</p>
+                <div class="disco__indiv">
+                    <p class="disco__title">Moonchild
+                    </p>
+                        <p class="disco__cap">Niki's debut album</p>
+                </div>
            </div>
-                <div class="disco__div">
-                    <p class="disco__cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, omnis. Praesentium accusantium necessitatibus ab velit. Repellendus, eos! Quae, nobis iste corrupti vitae ipsa saepe consequatur modi quaerat!</p>
+                <div class="disco__div" data-aos="zoom-in">
+                <div class="disco__indiv">
+                    <p class="disco__title">Nicole
+                    </p>
+                    <p class="disco__cap">Niki's 2nd album
+                    </p>
+                    </div>
                 <img class="imgDisco" src="../assets/img/disco/album_nicole.jpg" alt="album cover">
                 </div>
         </div>
@@ -111,5 +139,11 @@
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <!-- Fin Js -->
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- AOS -->
 </body>
 </html>
