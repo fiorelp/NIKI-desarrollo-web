@@ -2,6 +2,7 @@
 padding:0;
 box-sizing: border-box;
 }
+/* ESTILOS GENERALES */
 body{
     background-color: #010309;  
     color: #ffffff;
@@ -29,6 +30,8 @@ h4{
     font-size: 20px;
     line-height: 1.8;
 } */
+
+
 /* INICIO Home*/
 .home{
     display:grid;
@@ -48,16 +51,9 @@ h4{
     background-color: #010104;
     color: white; 
 }
-.navi{
-    background-color: #010104;
-}
 .logo{
     width: 300px;
     margin-left:1rem;
-}
-.menu{
-    list-style-type: none;
-    padding: 10px;
 }
 .menu__item{
     margin: 1rem;
@@ -142,16 +138,16 @@ h4{
     align-items: center;
     border-bottom: solid white 1px;
 }
+.section1 h3{
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 30x;
+   letter-spacing: 2px;
+}
 .section1__div{
     display: flex;
     align-items: center;
 }
-.section1 h3{
-    font-family: 'Over the Rainbow', cursive;
 
-    font-size: 30x;
-   letter-spacing: 2px;
-}
 .section1 iframe{
     padding: 2rem;
     margin: 1rem;
@@ -186,10 +182,6 @@ h4{
     height: auto;
     border-radius: 30px;
     margin: 1rem;
-}
-.cardname{
-    display: flex;
-    justify-content: space-evenly;
 }
 /* FIN Section2 Home */
 
@@ -421,7 +413,7 @@ h4{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
     grid-template-areas:
-    "header2 header2 header2"
+    "header header header"
     "jmain jmain jmain"
     "journey__section journey__section journey__section"
     "journey__section journey__section journey__section"
@@ -460,16 +452,17 @@ h4{
     line-height: 1.5;
     text-align: center;
 }
-.journey__div{
-    display: flex;
-    flex-direction: column;
-}
 .imgJourney{
     border-radius: 30px;
         width: 650px;
         padding: 10px;
         margin: 10px;
 }
+.journey__div{
+    display: flex;
+    flex-direction: column;
+}
+
 .journey__p{
     width: 800px;
     font-family: 'Caveat', cursive;
@@ -519,7 +512,7 @@ h4{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
     grid-template-areas: 
-    "header2  header2  header2"
+    "header  header  header"
     "sec1fc  fcmain sec2fc"
     "sec1fc  fcmain sec2fc"
     "sec1fc  fcmain sec2fc"
