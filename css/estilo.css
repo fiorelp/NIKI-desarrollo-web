@@ -379,7 +379,13 @@ h4{
     }
     .newAlbum{
         background-color: #010510;
-        color: white 
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    .newAlbum__div{
+        display: flex;
+        flex-direction: column;
     }
     .newAlbum__title{
         font-family:'Over the Rainbow', cursive;
@@ -389,7 +395,7 @@ h4{
         margin:3rem 3rem 0rem 3rem
     }
     .newAlbum__cap{
-        width: 560px;
+        width: 440px;
         text-align: center;
         letter-spacing: 2px;
         padding: 1rem;
@@ -404,8 +410,14 @@ h4{
     justify-content: center;
     margin-bottom: 6rem;
 }
+.disco h2{
+    width: 420px;
 }
-/* FIN MEDIAQUEIE Disco */
+.disco__div{
+    width: 420px;
+}
+}
+/* FIN MEDIAQUERIE Disco */
 
 /* INICIO JOURNEY */
 .journey{
@@ -462,7 +474,6 @@ h4{
     display: flex;
     flex-direction: column;
 }
-
 .journey__p{
     width: 800px;
     font-family: 'Caveat', cursive;
@@ -474,6 +485,27 @@ h4{
     margin: 1rem;
     text-align: center;
 }
+/* JOURNEY MEDIAQUERIE */
+@media screen and (max-width:480px) {
+    .journey{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "jmain"
+        "journey__section"
+        "journey__section"
+        "journey__section"
+        "footer footer footer ";
+    }
+    .imgJourney{
+        width: 450px;
+    }
+    .journey__p{
+        width: 450px;
+    }
+}
 /* FIN Journey */
 
 /* INICIO Gallery */
@@ -484,7 +516,6 @@ h4{
     margin-top:1rem;
 }
 .gallery__banner h1{
-    border: white solid 1px;
     padding: 2rem 8rem 2rem 8rem;
 }
 .gallery{
@@ -494,7 +525,7 @@ h4{
     justify-content: space-evenly;
 }
 .gallery__img{
-    width: 500px;
+    width: 400px;
 }
 .gallery__img:hover{
     transform: scale(1.5,1.5);
@@ -544,6 +575,8 @@ font-weight: none;
 }
 .fanclub__form{
     width: 500px;
+    margin: 48px;
+    padding: 16px;
 }
 .fanclub__submit{
     background-color:rgb(255, 252, 247);
@@ -579,6 +612,35 @@ font-weight: none;
     font-family:'Over the Rainbow', cursive;
     padding: 2rem;
 }
+/*  MEDIAQUERIES FANCLUB */
+@media screen and (max-width:480px){
+    .fanclub{grid-template-columns: 1fr;
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "fcmain"
+        "sec1fc"
+        "sec2fc"
+        "footer";
+    }
+    .fc__div{
+    display: flex;
+    flex-direction: column;
+    }
+    .fanclub__form{
+        margin: 1rem;
+        padding: 0px;
+        width: 400px;
+    }
+    .fc__img{
+        width: 440px;
+    }
+    .fc__p{
+        width: 420px;
+        padding: 1rem;
+    }
+}
+/* FIN MEDIAQUERIES FANCLUB */
 /* FIN Fanclub */
 
 /* INICIO FOOTER */
