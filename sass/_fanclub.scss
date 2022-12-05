@@ -1,0 +1,104 @@
+/* INICIO Fanclub */
+.fanclub{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas: 
+    "header  header  header"
+    "sec1fc  fcmain sec2fc"
+    "sec1fc  fcmain sec2fc"
+    "sec1fc  fcmain sec2fc"
+    "footer footer footer";
+}
+.fcmain{
+    grid-area: fcmain;
+    display: flex;
+    flex-direction: column;  
+    .fc__div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        h1{
+            font-weight: none;
+            }
+            p{
+                font-size: 25px;
+                letter-spacing: 2px;
+                text-align: center;
+                font-family:'La Belle Aurore', cursive;
+                padding: 1rem 1rem 0rem 1rem;
+            }
+    }
+    .fanclub__form{
+        width: 500px;
+        margin: 48px;
+        padding: 16px;
+        .formItem{
+            font-family: 'Over the Rainbow', cursive;
+            font-size: 20px;
+        }
+        .fanclub__submit{
+            background-color:rgb(255, 252, 247);
+            font-family: 'Over the Rainbow', cursive;
+            width: 5rem;
+        }
+    }
+}
+
+/*INICIO sections*/
+.sec1fc{
+    grid-area: sec1fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+.sec2fc{
+    grid-area: sec2fc;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fc__img{
+    width: 500px;
+    border-radius: 30px;
+}
+.fc__p{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family:'Over the Rainbow', cursive;
+    padding: 2rem;
+}
+
+/*  MEDIAQUERIES FANCLUB */
+@media screen and (max-width:480px){
+    .fanclub{grid-template-columns: 1fr;
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "fcmain"
+        "sec1fc"
+        "sec2fc"
+        "footer";
+    }
+    .fc__div{
+    display: flex;
+    flex-direction: column;
+    }
+    .fanclub__form{
+        margin: 1rem;
+        padding: 0px;
+        width: 400px;
+    }
+    .fc__img{
+        width: 440px;
+    }
+    .fc__p{
+        width: 420px;
+        padding: 1rem;
+    }
+}
+/* FIN MEDIAQUERIES FANCLUB */

@@ -1,0 +1,173 @@
+/* INICIO Discography */
+/* GRID */
+.container2{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas:
+    "header header header"
+    "newAlbum newAlbum newAlbumImg"
+    "disco disco disco"
+    "disco disco disco"
+    "footer footer footer ";
+}
+/* FIN GRID */
+
+/* INICIO Main: New Album */
+
+.newAlbum{
+    grid-area: newAlbum;
+    background-color: rgb(239, 225, 207);
+    color: #010510;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .newAlbum__title{
+            font-family:'Over the Rainbow', cursive;
+            font-weight: bold;
+            text-align: center;
+            margin: 2rem 0px 0px 0px;
+        }
+        .newAlbum__cap{
+            width:700px;
+            text-align: center;
+            padding: 1rem;
+            margin:1rem;
+            font-size: 2rem;
+            line-height: 1.2;
+            font-family: 'La Belle Aurore', cursive;
+        }
+        .newAlbum__cap2{
+            text-align: center;
+            padding: 1rem;
+            margin:1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Over the Rainbow', cursive;
+        }   
+    }
+    }
+    .newAlbumImg{
+        grid-area: newAlbumImg;
+        background-color:rgb(239, 225, 207);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img{
+            width:400px;
+            height:400px
+        }
+    }
+    /*FIN*/
+
+    /*INCICIO Section: Disco*/
+    .disco{
+        grid-area: disco;
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-family: 'Over the Rainbow', cursive;
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: bold;
+            align-self: center;
+        }
+        &__container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .disco__div{
+                background-color: rgb(255, 252, 247);
+                width: 35rem;
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 1rem;
+                padding: 1rem;
+                .imgDisco{
+                    width: 12rem;
+                    margin:5px;
+                    padding:10px;
+                }
+                .disco__indiv{
+                    display: flex;
+                    flex-direction: column;
+                    padding:1rem;
+                    margin: 1rem;
+                }
+                .disco__title{
+                    color: #010510;
+                    font-size: 30px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-family: 'Calligraffitti', cursive;
+                }
+                .disco__cap{
+                    color: #010510;
+                    font-size: 25px;
+                    font-family: 'Caveat', cursive;
+                }
+            }
+        }
+    }
+
+    /* MEDIAQUERIE Disco */
+@media screen and (max-width:480px){
+    .container2{grid-template-columns: 1fr;
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "newAlbum"
+        "newAlbumImg"
+        "disco"
+        "disco"
+        "footer ";
+    }
+    .newAlbum{
+        background-color: #010510;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        .newAlbum__div{
+            display: flex;
+            flex-direction: column;
+            .newAlbum__title{
+            font-family:'Over the Rainbow', cursive;
+            font-weight: bold;
+            text-align: center;
+            font-size:2rem;
+            margin:3rem 3rem 0rem 3rem
+        }
+            .newAlbum__cap{
+            width: 440px;
+            text-align: center;
+            letter-spacing: 2px;
+            padding: 1rem;
+            margin:1rem;
+            font-size: 2rem;
+            line-height: 1.2;
+            font-family: 'La Belle Aurore', cursive;
+        }
+        }
+        .newAlbumImg{
+            background-color: #010510;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 6rem;
+        }
+    }
+    .disco h2{
+        width: 420px;
+    }
+    .disco__div{
+        width: 420px;
+    }
+}
+/* FIN MEDIAQUERIE Disco */

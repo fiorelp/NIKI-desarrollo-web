@@ -1,0 +1,23 @@
+/*INIICIO HEADER/NAV*/
+
+.header{
+    grid-area: header;
+    background-color: #010104;
+    color: white;
+    .logo{
+        width: 300px;
+        margin-left:1rem;
+    }
+    .menu__item{
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        color: white;
+        font-family: 'Over the Rainbow', cursive;
+    }
+    .navbar-nav li a:hover{
+        color: #042da8 !important;
+      }
+}
+
+/*FIN HEADER*/

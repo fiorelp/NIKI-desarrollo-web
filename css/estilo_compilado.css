@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* ESTILOS GENERALES */
+body {
+  background-color: #010309;
+  color: #ffffff; }
+
+h1 {
+  text-align: center;
+  font-family: 'Over the Rainbow', cursive;
+  font-weight: bold;
+  font-size: 3rem; }
+
+h3 {
+  font-family: 'Calligraffitti', cursive;
+  font-size: 2rem;
+  letter-spacing: 2px; }
+
+h4 {
+  font-family: 'Over the Rainbow', cursive;
+  font-size: 20px;
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  text-align: center; }
+
+/*Fin*/
+/*INIICIO HEADER/NAV*/
+.header {
+  grid-area: header;
+  background-color: #010104;
+  color: white; }
+  .header .logo {
+    width: 300px;
+    margin-left: 1rem; }
+  .header .menu__item {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Over the Rainbow', cursive; }
+  .header .navbar-nav li a:hover {
+    color: #042da8 !important; }
+
+/*FIN HEADER*/
+/*HOME GRID*/
+.home {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0,3fr 2fr 2fr 1fr 0,3fr;
+  grid-template-areas: "header header header header header" "main main main main main" "section1 section1 section1 section1 section1" "section2 section2 section2 section2 section2" "footer footer footer footer footer"; }
+
+/* INICIO MAIN HOME*/
+.main {
+  grid-area: main;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .main .main__div {
+    width: 60rem;
+    height: 18.75rem;
+    margin: 2rem; }
+  .main .main__intro {
+    font-size: 30px;
+    font-weight: semibold;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 2rem;
+    font-family: 'La Belle Aurore', cursive; }
+
+.main__banner {
+  height: 700px;
+  background-image: url(../assets/img/home_banner.jpg);
+  background-attachment: fixed;
+  background-position: 20% 50%;
+  background-repeat: no-repeat; }
+
+/* FIN MAIN HOME*/
+/* INICIO Section1 Home */
+.section1 {
+  grid-area: section1;
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: solid white 1px; }
+  .section1 h3 {
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 30x;
+    letter-spacing: 2px; }
+  .section1__div {
+    display: flex;
+    align-items: center; }
+    .section1__div iframe {
+      padding: 2rem;
+      margin: 1rem;
+      width: 700px;
+      height: 393.75px; }
+  .section1__p {
+    width: 600px;
+    font-family: 'La Belle Aurore', cursive;
+    text-align: center;
+    font-size: 28px;
+    padding: 2rem;
+    margin: 1rem; }
+
+/* FIN Section1 Home */
+/* INICIO Section2 Home */
+.section2 {
+  grid-area: section2;
+  display: flex;
+  justify-content: space-evenly; }
+  .section2 h3 {
+    margin-top: 2rem;
+    text-align: center; }
+  .section2 .cards {
+    width: 400px;
+    height: auto;
+    border-radius: 30px;
+    margin: 1rem; }
+
+/* FIN Section2 Home */
+/* INICIO Home mediaqueries */
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "section1" "section2" "footer "; }
+  .main__banner {
+    background-image: url(../assets/img/home_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center; }
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main__div {
+      background-color: #0101048a;
+      width: 416px;
+      height: 550px; }
+  .section1 {
+    display: flex;
+    flex-direction: column; }
+    .section1 h3 {
+      font-size: 30px;
+      text-align: center; }
+    .section1__div {
+      display: flex;
+      flex-direction: column; }
+      .section1__div iframe {
+        width: 420px;
+        height: 236px;
+        margin: 16px 16px 0px 16px; }
+    .section1__p {
+      margin: 0px 16px 16px 16px;
+      padding: 1rem;
+      width: 400px;
+      font-size: 23px; }
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+
+/* INICIO Discography */
+/* GRID */
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+  grid-template-areas: "header header header" "newAlbum newAlbum newAlbumImg" "disco disco disco" "disco disco disco" "footer footer footer "; }
+
+/* FIN GRID */
+/* INICIO Main: New Album */
+.newAlbum {
+  grid-area: newAlbum;
+  background-color: #efe1cf;
+  color: #010510;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .newAlbum__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .newAlbum__div .newAlbum__title {
+      font-family: 'Over the Rainbow', cursive;
+      font-weight: bold;
+      text-align: center;
+      margin: 2rem 0px 0px 0px; }
+    .newAlbum__div .newAlbum__cap {
+      width: 700px;
+      text-align: center;
+      padding: 1rem;
+      margin: 1rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-family: 'La Belle Aurore', cursive; }
+    .newAlbum__div .newAlbum__cap2 {
+      text-align: center;
+      padding: 1rem;
+      margin: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: 'Over the Rainbow', cursive; }
+
+.newAlbumImg {
+  grid-area: newAlbumImg;
+  background-color: #efe1cf;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .newAlbumImg img {
+    width: 400px;
+    height: 400px; }
+
+/*FIN*/
+/*INCICIO Section: Disco*/
+.disco {
+  grid-area: disco;
+  display: flex;
+  flex-direction: column; }
+  .disco h2 {
+    font-family: 'Over the Rainbow', cursive;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    align-self: center; }
+  .disco__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .disco__container .disco__div {
+      background-color: #fffcf7;
+      width: 35rem;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 1rem;
+      padding: 1rem; }
+      .disco__container .disco__div .imgDisco {
+        width: 12rem;
+        margin: 5px;
+        padding: 10px; }
+      .disco__container .disco__div .disco__indiv {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 1rem; }
+      .disco__container .disco__div .disco__title {
+        color: #010510;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Calligraffitti', cursive; }
+      .disco__container .disco__div .disco__cap {
+        color: #010510;
+        font-size: 25px;
+        font-family: 'Caveat', cursive; }
+
+/* MEDIAQUERIE Disco */
+@media screen and (max-width: 480px) {
+  .container2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas: "header" "newAlbum" "newAlbumImg" "disco" "disco" "footer "; }
+  .newAlbum {
+    background-color: #010510;
+    color: white;
+    display: flex;
+    flex-direction: column; }
+    .newAlbum .newAlbum__div {
+      display: flex;
+      flex-direction: column; }
+      .newAlbum .newAlbum__div .newAlbum__title {
+        font-family: 'Over the Rainbow', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2rem;
+        margin: 3rem 3rem 0rem 3rem; }
+      .newAlbum .newAlbum__div .newAlbum__cap {
+        width: 440px;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: 'La Belle Aurore', cursive; }
+    .newAlbum .newAlbumImg {
+      background-color: #010510;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 6rem; }
+  .disco h2 {
+    width: 420px; }
+  .disco__div {
+    width: 420px; } }
+
+/* FIN MEDIAQUERIE Disco */
+/* INICIO JOURNEY */
+.journey {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+  grid-template-areas: "header header header" "jmain jmain jmain" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "footer footer footer "; }
+
+.jmain {
+  grid-area: jmain; }
+
+.bannerJourn {
+  background-image: url(../assets/img/journey_banner.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  padding: 30px;
+  margin: auto;
+  color: #010a07; }
+
+/*INICIO Section1 Journey*/
+.journey__section {
+  grid-area: journey__section;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .journey__section .journey__intro {
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 35px;
+    align-self: center;
+    font-family: 'Caveat', cursive;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    line-height: 1.5;
+    text-align: center; }
+  .journey__section .imgJourney {
+    border-radius: 30px;
+    width: 650px;
+    padding: 10px;
+    margin: 10px; }
+  .journey__section .journey__div {
+    display: flex;
+    flex-direction: column; }
+    .journey__section .journey__div .journey__p {
+      width: 800px;
+      font-family: 'Caveat', cursive;
+      font-size: 30px;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      line-height: 1.5;
+      padding: 1rem;
+      margin: 1rem;
+      text-align: center; }
+
+/* JOURNEY MEDIAQUERIE */
+@media screen and (max-width: 480px) {
+  .journey {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas: "header" "jmain" "journey__section" "journey__section" "journey__section" "footer footer footer "; }
+  .imgJourney {
+    width: 450px; }
+  .journey__p {
+    width: 450px; } }
+
+/* FIN Journey */
+/* INICIO Gallery */
+.gallery__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem; }
+  .gallery__banner h1 {
+    padding: 2rem 8rem 2rem 8rem; }
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .gallery__div {
+    margin: 20px; }
+  .gallery .gallery__img {
+    width: 400px; }
+
+/* INICIO Fanclub */
+.fanclub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+  grid-template-areas: "header  header  header" "sec1fc  fcmain sec2fc" "sec1fc  fcmain sec2fc" "sec1fc  fcmain sec2fc" "footer footer footer"; }
+
+.fcmain {
+  grid-area: fcmain;
+  display: flex;
+  flex-direction: column; }
+  .fcmain .fc__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+    .fcmain .fc__div h1 {
+      font-weight: none; }
+    .fcmain .fc__div p {
+      font-size: 25px;
+      letter-spacing: 2px;
+      text-align: center;
+      font-family: 'La Belle Aurore', cursive;
+      padding: 1rem 1rem 0rem 1rem; }
+  .fcmain .fanclub__form {
+    width: 500px;
+    margin: 48px;
+    padding: 16px; }
+    .fcmain .fanclub__form .formItem {
+      font-family: 'Over the Rainbow', cursive;
+      font-size: 20px; }
+    .fcmain .fanclub__form .fanclub__submit {
+      background-color: #fffcf7;
+      font-family: 'Over the Rainbow', cursive;
+      width: 5rem; }
+
+/*INICIO sections*/
+.sec1fc {
+  grid-area: sec1fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.sec2fc {
+  grid-area: sec2fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.fc__img {
+  width: 500px;
+  border-radius: 30px; }
+
+.fc__p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 2rem; }
+
+/*  MEDIAQUERIES FANCLUB */
+@media screen and (max-width: 480px) {
+  .fanclub {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas: "header" "fcmain" "sec1fc" "sec2fc" "footer"; }
+  .fc__div {
+    display: flex;
+    flex-direction: column; }
+  .fanclub__form {
+    margin: 1rem;
+    padding: 0px;
+    width: 400px; }
+  .fc__img {
+    width: 440px; }
+  .fc__p {
+    width: 420px;
+    padding: 1rem; } }
+
+/* FIN MEDIAQUERIES FANCLUB */
+/* INICIO FOOTER */
+.footer {
+  grid-area: footer;
+  background-color: #010104;
+  padding: 20px;
+  border-top: solid 1px white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly; }
+  .footer a {
+    text-decoration: none; }
+  .footer__logo {
+    width: 50px;
+    padding: 0.5rem; }
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.labelLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10%; }
+
+/* FIN FOOTER */

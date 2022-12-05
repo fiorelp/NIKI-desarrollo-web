@@ -1,0 +1,90 @@
+/* INICIO JOURNEY */
+.journey{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas:
+    "header header header"
+    "jmain jmain jmain"
+    "journey__section journey__section journey__section"
+    "journey__section journey__section journey__section"
+    "footer footer footer ";
+}
+.jmain{
+    grid-area: jmain;
+}
+.bannerJourn{
+    background-image: url(../assets/img/journey_banner.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+    padding:30px;
+    margin:auto;
+    color:#010a07
+}
+
+/*INICIO Section1 Journey*/
+.journey__section{
+    grid-area: journey__section;
+    display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     .journey__intro{
+        margin:2rem;
+        padding:2rem;
+        font-size:35px;
+        align-self: center;
+        font-family: 'Caveat', cursive;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        line-height: 1.5;
+        text-align: center;
+     }
+     .imgJourney{
+        border-radius: 30px;
+            width: 650px;
+            padding: 10px;
+            margin: 10px;
+    }
+    .journey__div{
+        display: flex;
+        flex-direction: column;
+        .journey__p{
+            width: 800px;
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            line-height: 1.5;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;  
+        }
+    }
+}
+/* JOURNEY MEDIAQUERIE */
+@media screen and (max-width:480px) {
+    .journey{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "jmain"
+        "journey__section"
+        "journey__section"
+        "journey__section"
+        "footer footer footer ";
+    }
+    .imgJourney{
+        width: 450px;
+    }
+    .journey__p{
+        width: 450px;
+    }
+}
+/* FIN Journey */

@@ -1,0 +1,30 @@
+/* INICIO FOOTER */
+.footer{
+    grid-area: footer;
+    background-color:#010104;
+    padding: 20px;
+    border-top:solid 1px white;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    a{
+    text-decoration: none;
+}
+&__logo{
+    width: 50px;
+    padding: 0.5rem;
+}
+}
+.label{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.labelLogo{
+    width: 50px;;
+    height:50px;
+    border-radius: 10%;
+}
+
+/* FIN FOOTER */

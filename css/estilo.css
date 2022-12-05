@@ -532,8 +532,7 @@ h4{
     border: solid 1px rgba(197, 195, 195, 0.246);
 }
 .gallery__div{
-    margin: 20px;
-    
+    margin: 20px; 
 }
 /* FIN Gallery */
 
@@ -548,9 +547,6 @@ h4{
     "sec1fc  fcmain sec2fc"
     "sec1fc  fcmain sec2fc"
     "footer footer footer";
-}
-.header2{
-    grid-area: header2;
 }
 .fcmain{
     grid-area: fcmain;
