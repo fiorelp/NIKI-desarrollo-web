@@ -119,33 +119,77 @@
     }
 
     /* MEDIAQUERIE Disco */
-@media screen and (max-width:480px){
-    .container2{grid-template-columns: 1fr;
-        grid-template-rows: 0,3fr 1fr 1fr 1fr 1fr 0,3fr;
-        grid-template-areas:
-        "header"
-        "newAlbum"
-        "newAlbumImg"
-        "disco"
-        "disco"
-        "footer ";
-    }
-    .newAlbum{
-        background-color: #010510;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        .newAlbum__div{
+    @media screen and (max-width:768px){
+        .container2 {
+            grid-template-areas:"header header header"
+        "newAlbum newAlbum newAlbum"
+        "newAlbumImg newAlbumImg newAlbumImg"
+        "disco disco disco"
+        "disco disco disco"
+        "footer footer footer";}
+        .newAlbum{
+            background-color: #010510;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            &__div{
             display: flex;
             flex-direction: column;
             .newAlbum__title{
+                font-family:'Over the Rainbow', cursive;
+                font-weight: bold;
+                text-align: center;
+                font-size:2rem;
+                margin:3rem 3rem 0rem 3rem
+            }
+            .newAlbum__cap{
+                text-align: center;
+                letter-spacing: 2px;
+                padding: 1rem;
+                margin:1rem;
+                font-size: 2rem;
+                line-height: 1.2;
+                font-family: 'La Belle Aurore', cursive;
+        }
+        }
+        }
+        .newAlbumImg{
+            grid-area: newAlbumImg;
+            background-color:#010510;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 6rem;
+        }
+
+    }
+
+    @media screen and (max-width:480px){
+        .container2{grid-template-columns: 1fr;
+            grid-template-areas:
+            "header"
+            "newAlbum"
+            "newAlbumImg"
+            "disco"
+            "disco"
+            "footer ";
+        }
+        .newAlbum{
+            background-color: #010510;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        .newAlbum__div{
+            display: flex;
+            flex-direction: column;
+        }
+        .newAlbum__title{
             font-family:'Over the Rainbow', cursive;
             font-weight: bold;
             text-align: center;
             font-size:2rem;
             margin:3rem 3rem 0rem 3rem
         }
-            .newAlbum__cap{
+        .newAlbum__cap{
             width: 440px;
             text-align: center;
             letter-spacing: 2px;
@@ -155,19 +199,12 @@
             line-height: 1.2;
             font-family: 'La Belle Aurore', cursive;
         }
-        }
-        .newAlbumImg{
-            background-color: #010510;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 6rem;
-        }
+    } 
+    .newAlbumImg{
+        background-color: #010510;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6rem;
     }
-    .disco h2{
-        width: 420px;
     }
-    .disco__div{
-        width: 420px;
-    }
-}
-/* FIN MEDIAQUERIE Disco */
+    /* FIN MEDIAQUERIE Disco */

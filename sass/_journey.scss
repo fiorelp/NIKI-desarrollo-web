@@ -67,6 +67,22 @@
     }
 }
 /* JOURNEY MEDIAQUERIE */
+@media screen and (max-width:768px){
+    .journey{
+        grid-template-areas:"header header header"
+    "jmain jmain jmain"
+    "journey__section journey__section journey__section"
+    "journey__section journey__section journey__section"
+    "journey__section journey__section journey__section"
+    "footer footer footer";}
+    .imgJourney{
+        width: 650px;
+    }
+    .journey__p{
+        width: 700px;
+    }
+    
+}
 @media screen and (max-width:480px) {
     .journey{
         display:grid;

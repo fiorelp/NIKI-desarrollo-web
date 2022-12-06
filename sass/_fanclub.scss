@@ -74,6 +74,33 @@
 }
 
 /*  MEDIAQUERIES FANCLUB */
+@media screen and (max-width:768px){
+    .fanclub{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header  header  header"
+        "fcmain  fcmain fcmain"
+        "sec1fc  sec1fc sec1fc"
+        "sec2fc  sec2fc sec2fc"
+        "footer footer footer";
+    }
+    
+    .fanclub__form{
+        align-self: center;
+    }
+    .fc__img{
+        display: none;
+    }
+    .fc__p{
+        font-size: 25px;
+        letter-spacing: 2px;
+        text-align: center;
+        font-weight: bold;
+        padding: 1rem;
+        margin:0px 0px 16px 0px
+    }
+}
+
 @media screen and (max-width:480px){
     .fanclub{grid-template-columns: 1fr;
         grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;

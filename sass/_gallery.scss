@@ -20,3 +20,14 @@
         width: 400px;
     }
 }
+
+@media screen and (max-width:768px) {
+    .gallery__img{
+        width: 200px;
+    }
+}
+@media screen and (max-width:480px) {
+    .gallery__img{
+        width: 400px;
+    }
+}

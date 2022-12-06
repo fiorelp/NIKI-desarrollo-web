@@ -124,6 +124,40 @@ h4 {
 
 /* FIN Section2 Home */
 /* INICIO Home mediaqueries */
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header heade header" "main main main" "section1 section1 section1" "section2 section2 section2" "footer footer footer"; }
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main .main__div {
+      background-color: #0101048a;
+      width: 416px;
+      height: 550px; }
+  .section1 {
+    display: flex;
+    flex-direction: column; }
+    .section1 .section1 h3 {
+      font-size: 30px;
+      text-align: center; }
+    .section1 .section1__div {
+      display: flex;
+      flex-direction: column; }
+      .section1 .section1__div .section1 iframe {
+        margin: 16px 16px 0px 16px; }
+      .section1 .section1__div .section1__p {
+        margin: 0px 16px 16px 16px;
+        padding: 1rem;
+        font-size: 25px; }
+  .section2 {
+    display: flex;
+    flex-wrap: wrap; }
+    .section2 .cards {
+      width: 300px;
+      height: auto; } }
+
 @media screen and (max-width: 480px) {
   .container {
     grid-template-columns: 1fr;
@@ -263,10 +297,41 @@ h4 {
         font-family: 'Caveat', cursive; }
 
 /* MEDIAQUERIE Disco */
+@media screen and (max-width: 768px) {
+  .container2 {
+    grid-template-areas: "header header header" "newAlbum newAlbum newAlbum" "newAlbumImg newAlbumImg newAlbumImg" "disco disco disco" "disco disco disco" "footer footer footer"; }
+  .newAlbum {
+    background-color: #010510;
+    color: white;
+    display: flex;
+    flex-direction: column; }
+    .newAlbum__div {
+      display: flex;
+      flex-direction: column; }
+      .newAlbum__div .newAlbum__title {
+        font-family: 'Over the Rainbow', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2rem;
+        margin: 3rem 3rem 0rem 3rem; }
+      .newAlbum__div .newAlbum__cap {
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: 'La Belle Aurore', cursive; }
+  .newAlbumImg {
+    grid-area: newAlbumImg;
+    background-color: #010510;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem; } }
+
 @media screen and (max-width: 480px) {
   .container2 {
     grid-template-columns: 1fr;
-    grid-template-rows: 0,3fr 1fr 1fr 1fr 1fr 0,3fr;
     grid-template-areas: "header" "newAlbum" "newAlbumImg" "disco" "disco" "footer "; }
   .newAlbum {
     background-color: #010510;
@@ -276,30 +341,26 @@ h4 {
     .newAlbum .newAlbum__div {
       display: flex;
       flex-direction: column; }
-      .newAlbum .newAlbum__div .newAlbum__title {
-        font-family: 'Over the Rainbow', cursive;
-        font-weight: bold;
-        text-align: center;
-        font-size: 2rem;
-        margin: 3rem 3rem 0rem 3rem; }
-      .newAlbum .newAlbum__div .newAlbum__cap {
-        width: 440px;
-        text-align: center;
-        letter-spacing: 2px;
-        padding: 1rem;
-        margin: 1rem;
-        font-size: 2rem;
-        line-height: 1.2;
-        font-family: 'La Belle Aurore', cursive; }
-    .newAlbum .newAlbumImg {
-      background-color: #010510;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 6rem; }
-  .disco h2 {
-    width: 420px; }
-  .disco__div {
-    width: 420px; } }
+    .newAlbum .newAlbum__title {
+      font-family: 'Over the Rainbow', cursive;
+      font-weight: bold;
+      text-align: center;
+      font-size: 2rem;
+      margin: 3rem 3rem 0rem 3rem; }
+    .newAlbum .newAlbum__cap {
+      width: 440px;
+      text-align: center;
+      letter-spacing: 2px;
+      padding: 1rem;
+      margin: 1rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-family: 'La Belle Aurore', cursive; }
+  .newAlbumImg {
+    background-color: #010510;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem; } }
 
 /* FIN MEDIAQUERIE Disco */
 /* INICIO JOURNEY */
@@ -361,6 +422,14 @@ h4 {
       text-align: center; }
 
 /* JOURNEY MEDIAQUERIE */
+@media screen and (max-width: 768px) {
+  .journey {
+    grid-template-areas: "header header header" "jmain jmain jmain" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "footer footer footer"; }
+  .imgJourney {
+    width: 650px; }
+  .journey__p {
+    width: 700px; } }
+
 @media screen and (max-width: 480px) {
   .journey {
     display: grid;
@@ -391,6 +460,14 @@ h4 {
     margin: 20px; }
   .gallery .gallery__img {
     width: 400px; }
+
+@media screen and (max-width: 768px) {
+  .gallery__img {
+    width: 200px; } }
+
+@media screen and (max-width: 480px) {
+  .gallery__img {
+    width: 400px; } }
 
 /* INICIO Fanclub */
 .fanclub {
@@ -455,6 +532,22 @@ h4 {
   padding: 2rem; }
 
 /*  MEDIAQUERIES FANCLUB */
+@media screen and (max-width: 768px) {
+  .fanclub {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header  header  header" "fcmain  fcmain fcmain" "sec1fc  sec1fc sec1fc" "sec2fc  sec2fc sec2fc" "footer footer footer"; }
+  .fanclub__form {
+    align-self: center; }
+  .fc__img {
+    display: none; }
+  .fc__p {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0px 0px 16px 0px; } }
+
 @media screen and (max-width: 480px) {
   .fanclub {
     grid-template-columns: 1fr;
