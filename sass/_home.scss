@@ -83,7 +83,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     border-bottom: solid white 1px;
-    h2{
+    .tour__title{
         margin: 2rem;
         padding: 2.5rem;
         font-family: 'Over the Rainbow', cursive;
@@ -92,6 +92,10 @@
         align-self: center;
         border: solid white 1px;
         border-radius: 30px;
+        animation-name: us;
+        animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-delay: 10s;   
     }
     .tour__dates{
         width: 250px;
@@ -106,15 +110,55 @@
         background-color: rgb(255, 255, 255);
         border-radius: 30px;
         font-family:'La Belle Aurore', cursive;
-        font-size: 25px;
+        font-size: 30px;
         h3{
             font-weight: bold;
             font-family: 'Over the Rainbow', cursive;
             padding: 1rem;
-            font-size: 20px;
+            font-size: 22px;
+        }
+        .tickets{
+            a{
+                text-decoration: none;
+            } 
+            h4{ 
+                padding: 1rem;
+                color: #ffffff;
+                font-family: $caligra;
+                font-weight: bold;
+                background-color: #011552;
+                border-radius: 15px;
+                &:hover{
+                background-color: #ffffff;
+                color: #011552;}  
+            }
         }
     }
 }
+
+@keyframes us{
+    0% {
+      color: #001c72; }
+    25% {
+      color: #ffffff; }
+    50% {
+      color: #ffffff; }
+    100% {
+      color: #001c72; } }
+
+@keyframes ticket{
+    0% {
+        background-color: #011552;
+        color:white }
+    25% {
+          background-color: #ffffff;
+        color: #011552; }
+    50% {
+        background-color: #ffffff;
+        color: #011552; }
+    100% {background-color: #011552;
+        color:white} 
+    }
 /* INICIO Section2 Home */
 
 .section2{
@@ -209,7 +253,7 @@
     .section1{
         display: flex;
         flex-direction: column;
-        h3{
+        h2{
             font-size: 30px;
             text-align: center;
         }

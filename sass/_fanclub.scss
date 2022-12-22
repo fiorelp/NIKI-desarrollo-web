@@ -84,20 +84,37 @@
         "sec2fc  sec2fc sec2fc"
         "footer footer footer";
     }
-    
-    .fanclub__form{
+    .fcmain{
+        .fanclub__form{
         align-self: center;
+        width: 650px;
+        }
     }
-    .fc__img{
+    .sec1fc{
+        .fc__img{
         display: none;
-    }
-    .fc__p{
+        }
+        .fc__p{
         font-size: 25px;
         letter-spacing: 2px;
         text-align: center;
         font-weight: bold;
         padding: 1rem;
         margin:0px 0px 16px 0px
+        }
+    }
+    .sec2fc{
+        .fc__img{
+            display: none;
+            }
+            .fc__p{
+            font-size: 25px;
+            letter-spacing: 2px;
+            text-align: center;
+            font-weight: bold;
+            padding: 1rem;
+            margin:0px 0px 16px 0px
+            }
     }
 }
 
@@ -111,14 +128,13 @@
         "sec2fc"
         "footer";
     }
-    .fc__div{
-    display: flex;
-    flex-direction: column;
-    }
-    .fanclub__form{
+    .fcmain{
+
+        .fanclub__form{
         margin: 1rem;
         padding: 0px;
-        width: 400px;
+            width: 400px;
+        }
     }
     .fc__img{
         width: 440px;

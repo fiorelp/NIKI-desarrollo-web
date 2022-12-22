@@ -80,15 +80,25 @@
         }
         &__container{
             display: flex;
+            justify-content: space-evenly;
             flex-wrap: wrap;
-            justify-content: center;
+            margin: 1rem;
+            padding: 1rem;
+            border-bottom: dotted white 0.2px;
+            h3{
+                align-self: flex-start;
+                font-size: 40px;
+                margin: 1rem;
+                padding:2rem;
+            }
             .disco__div{
                 background-color: rgb(255, 252, 247);
-                width: 35rem;
+                width: 38rem;
                 border-radius: 30px;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
+                text-align: center;
                 margin: 1rem;
                 padding: 1rem;
                 .imgDisco{
@@ -108,14 +118,70 @@
                     text-align: center;
                     font-weight: bold;
                     font-family: 'Calligraffitti', cursive;
+                    margin: 0;
                 }
                 .disco__cap{
                     color: #010510;
                     font-size: 25px;
                     font-family: 'Caveat', cursive;
+                    margin: 0;
+                }
+                .view__btn{
+                    font-size: 25px;
+                    font-weight: bold;
+                    font-family: 'La Belle Aurore', cursive;
+                    text-decoration: underline;
+                }
+                .view__btn:hover{
+                    background-color: #010510;
+                    color: white;
+                }
+                a{
+                    text-decoration: none;
+                }
+                .spotify{
+                    width: 80px;
+                }
+                .apple{
+                    width:50px;
                 }
             }
         }
+        &__container2{
+            @extend .disco__container;
+            border: 0px;
+        }
+    }
+
+    .track__div{
+        display:flex;
+        flex-direction: column;
+        p{
+            font-size: 28px;
+            font-family: 'Caveat', cursive;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            a{
+                color: white
+            }
+        }
+        .italic{
+            @extend p;
+            font-style:italic
+        }
+    }
+    .tracklist{
+        background-color: #010510;
+    }
+    .tracks{
+        padding-bottom: 0.5rem;
+        font-family: 'La Belle Aurore', cursive;
+        font-size: 25px;
+    }
+    .tracks__btn{
+        background-color: rgb(255, 252, 247);
+        font-family: 'Over the Rainbow', cursive;
+        
     }
 
     /* MEDIAQUERIE Disco */
@@ -178,33 +244,56 @@
             color: white;
             display: flex;
             flex-direction: column;
-        .newAlbum__div{
+            .newAlbum__div{
             display: flex;
             flex-direction: column;
-        }
-        .newAlbum__title{
-            font-family:'Over the Rainbow', cursive;
-            font-weight: bold;
-            text-align: center;
-            font-size:2rem;
-            margin:3rem 3rem 0rem 3rem
-        }
-        .newAlbum__cap{
-            width: 440px;
-            text-align: center;
-            letter-spacing: 2px;
-            padding: 1rem;
-            margin:1rem;
-            font-size: 2rem;
-            line-height: 1.2;
-            font-family: 'La Belle Aurore', cursive;
-        }
+                .newAlbum__title{
+                width: 350px;
+                font-family:'Over the Rainbow', cursive;
+                font-weight: bold;
+                text-align: center;
+                font-size:2rem;
+                margin:3rem 3rem 0rem 3rem
+                }
+                .newAlbum__cap{
+                width: 440px;
+                text-align: center;
+                letter-spacing: 2px;
+                padding: 1rem;
+                margin:1rem;
+                font-size: 2rem;
+                line-height: 1.2;
+                font-family: 'La Belle Aurore', cursive;
+                }
+                .newAlbum__cap2{
+                width: 400px;
+                }   
+            }
+       
+        
+        
     } 
     .newAlbumImg{
         background-color: #010510;
         display: flex;
         justify-content: center;
         margin-bottom: 6rem;
+        
+    }
+    .disco{
+       h2{
+            width: 400px;
+        }
+        &__container{
+            margin: 0rem;
+            padding: 0rem;
+            .disco__div{
+                width: 28rem;
+            }
+        }
+        .imgDisco{
+            width:5rem;
+        }
     }
     }
     /* FIN MEDIAQUERIE Disco */

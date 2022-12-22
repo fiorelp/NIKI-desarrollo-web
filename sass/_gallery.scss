@@ -19,15 +19,24 @@
     .gallery__img{
         width: 400px;
     }
+    .gallery__img:hover{
+        transform: scale(1.5,1.5);
+        transition: all 1s ease;
+        border: solid 1px rgba(197, 195, 195, 0.246);
+    }
 }
 
 @media screen and (max-width:768px) {
-    .gallery__img{
-        width: 200px;
+    .gallery{
+        .gallery__img{
+        width: 320px;
+        }
     }
 }
 @media screen and (max-width:480px) {
-    .gallery__img{
+    .gallery{
+        .gallery__img{
         width: 400px;
+        }
     }
 }

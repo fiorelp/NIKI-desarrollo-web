@@ -32,7 +32,7 @@
      flex-direction: row;
      flex-wrap: wrap;
      justify-content: space-evenly;
-     .journey__intro{
+    .journey__intro{
         margin:2rem;
         padding:2rem;
         font-size:35px;
@@ -44,7 +44,7 @@
         line-height: 1.5;
         text-align: center;
      }
-     .imgJourney{
+    .imgJourney{
         border-radius: 30px;
             width: 650px;
             padding: 10px;
@@ -54,7 +54,7 @@
         display: flex;
         flex-direction: column;
         .journey__p{
-            width: 800px;
+            width: 700px;
             font-family: 'Caveat', cursive;
             font-size: 30px;
             letter-spacing: 2px;
@@ -75,12 +75,6 @@
     "journey__section journey__section journey__section"
     "journey__section journey__section journey__section"
     "footer footer footer";}
-    .imgJourney{
-        width: 650px;
-    }
-    .journey__p{
-        width: 700px;
-    }
     
 }
 @media screen and (max-width:480px) {
@@ -96,11 +90,25 @@
         "journey__section"
         "footer footer footer ";
     }
-    .imgJourney{
+    .journey__section{
+        h1{
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .journey__intro{
+            font-family: 'Caveat', cursive;
+            margin: 0rem 1rem 1rem 1rem;
+            padding: 0rem 1rem 1rem 1rem;
+            font-weight: bold;
+        }
+        .imgJourney{
         width: 450px;
-    }
-    .journey__p{
-        width: 450px;
+        }
+        .journey__div{
+            .journey__p{
+                width: 450px;
+            }
+        }
     }
 }
 /* FIN Journey */

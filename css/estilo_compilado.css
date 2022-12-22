@@ -27,6 +27,7 @@ h4 {
   text-align: center; }
 
 /*Fin*/
+/*VARIABLES*/
 /*HOME GRID*/
 .home {
   display: grid;
@@ -97,7 +98,7 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-bottom: solid white 1px; }
-  .tour h2 {
+  .tour .tour__title {
     margin: 2rem;
     padding: 2.5rem;
     font-family: 'Over the Rainbow', cursive;
@@ -105,7 +106,11 @@ h4 {
     font-size: 50px;
     align-self: center;
     border: solid white 1px;
-    border-radius: 30px; }
+    border-radius: 30px;
+    animation-name: us;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 10s; }
   .tour .tour__dates {
     width: 250px;
     display: flex;
@@ -119,12 +124,48 @@ h4 {
     background-color: white;
     border-radius: 30px;
     font-family: 'La Belle Aurore', cursive;
-    font-size: 25px; }
+    font-size: 30px; }
     .tour .tour__dates h3 {
       font-weight: bold;
       font-family: 'Over the Rainbow', cursive;
       padding: 1rem;
-      font-size: 20px; }
+      font-size: 22px; }
+    .tour .tour__dates .tickets a {
+      text-decoration: none; }
+    .tour .tour__dates .tickets h4 {
+      padding: 1rem;
+      color: #ffffff;
+      font-family: "Calligraffitti", cursive;
+      font-weight: bold;
+      background-color: #011552;
+      border-radius: 15px; }
+      .tour .tour__dates .tickets h4:hover {
+        background-color: #ffffff;
+        color: #011552; }
+
+@keyframes us {
+  0% {
+    color: #001c72; }
+  25% {
+    color: #ffffff; }
+  50% {
+    color: #ffffff; }
+  100% {
+    color: #001c72; } }
+
+@keyframes ticket {
+  0% {
+    background-color: #011552;
+    color: white; }
+  25% {
+    background-color: #ffffff;
+    color: #011552; }
+  50% {
+    background-color: #ffffff;
+    color: #011552; }
+  100% {
+    background-color: #011552;
+    color: white; } }
 
 /* INICIO Section2 Home */
 .section2 {
@@ -195,7 +236,7 @@ h4 {
   .section1 {
     display: flex;
     flex-direction: column; }
-    .section1 h3 {
+    .section1 h2 {
       font-size: 30px;
       text-align: center; }
     .section1__div {
@@ -299,38 +340,90 @@ h4 {
     letter-spacing: 2px;
     font-weight: bold;
     align-self: center; }
-  .disco__container {
+  .disco__container, .disco__container2 {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: center; }
-    .disco__container .disco__div {
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: dotted white 0.2px; }
+    .disco__container h3, .disco__container2 h3 {
+      align-self: flex-start;
+      font-size: 40px;
+      margin: 1rem;
+      padding: 2rem; }
+    .disco__container .disco__div, .disco__container2 .disco__div {
       background-color: #fffcf7;
-      width: 35rem;
+      width: 38rem;
       border-radius: 30px;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      text-align: center;
       margin: 1rem;
       padding: 1rem; }
-      .disco__container .disco__div .imgDisco {
+      .disco__container .disco__div .imgDisco, .disco__container2 .disco__div .imgDisco {
         width: 12rem;
         margin: 5px;
         padding: 10px; }
-      .disco__container .disco__div .disco__indiv {
+      .disco__container .disco__div .disco__indiv, .disco__container2 .disco__div .disco__indiv {
         display: flex;
         flex-direction: column;
         padding: 1rem;
         margin: 1rem; }
-      .disco__container .disco__div .disco__title {
+      .disco__container .disco__div .disco__title, .disco__container2 .disco__div .disco__title {
         color: #010510;
         font-size: 30px;
         text-align: center;
         font-weight: bold;
-        font-family: 'Calligraffitti', cursive; }
-      .disco__container .disco__div .disco__cap {
+        font-family: 'Calligraffitti', cursive;
+        margin: 0; }
+      .disco__container .disco__div .disco__cap, .disco__container2 .disco__div .disco__cap {
         color: #010510;
         font-size: 25px;
-        font-family: 'Caveat', cursive; }
+        font-family: 'Caveat', cursive;
+        margin: 0; }
+      .disco__container .disco__div .view__btn, .disco__container2 .disco__div .view__btn {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'La Belle Aurore', cursive;
+        text-decoration: underline; }
+      .disco__container .disco__div .view__btn:hover, .disco__container2 .disco__div .view__btn:hover {
+        background-color: #010510;
+        color: white; }
+      .disco__container .disco__div a, .disco__container2 .disco__div a {
+        text-decoration: none; }
+      .disco__container .disco__div .spotify, .disco__container2 .disco__div .spotify {
+        width: 80px; }
+      .disco__container .disco__div .apple, .disco__container2 .disco__div .apple {
+        width: 50px; }
+  .disco__container2 {
+    border: 0px; }
+
+.track__div {
+  display: flex;
+  flex-direction: column; }
+  .track__div p, .track__div .italic {
+    font-size: 28px;
+    font-family: 'Caveat', cursive;
+    padding: 0.5rem;
+    margin: 0.5rem; }
+    .track__div p a, .track__div .italic a {
+      color: white; }
+  .track__div .italic {
+    font-style: italic; }
+
+.tracklist {
+  background-color: #010510; }
+
+.tracks {
+  padding-bottom: 0.5rem;
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 25px; }
+
+.tracks__btn {
+  background-color: #fffcf7;
+  font-family: 'Over the Rainbow', cursive; }
 
 /* MEDIAQUERIE Disco */
 @media screen and (max-width: 768px) {
@@ -377,26 +470,38 @@ h4 {
     .newAlbum .newAlbum__div {
       display: flex;
       flex-direction: column; }
-    .newAlbum .newAlbum__title {
-      font-family: 'Over the Rainbow', cursive;
-      font-weight: bold;
-      text-align: center;
-      font-size: 2rem;
-      margin: 3rem 3rem 0rem 3rem; }
-    .newAlbum .newAlbum__cap {
-      width: 440px;
-      text-align: center;
-      letter-spacing: 2px;
-      padding: 1rem;
-      margin: 1rem;
-      font-size: 2rem;
-      line-height: 1.2;
-      font-family: 'La Belle Aurore', cursive; }
+      .newAlbum .newAlbum__div .newAlbum__title {
+        width: 350px;
+        font-family: 'Over the Rainbow', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2rem;
+        margin: 3rem 3rem 0rem 3rem; }
+      .newAlbum .newAlbum__div .newAlbum__cap {
+        width: 440px;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: 'La Belle Aurore', cursive; }
+      .newAlbum .newAlbum__div .newAlbum__cap2 {
+        width: 400px; }
   .newAlbumImg {
     background-color: #010510;
     display: flex;
     justify-content: center;
-    margin-bottom: 6rem; } }
+    margin-bottom: 6rem; }
+  .disco h2 {
+    width: 400px; }
+  .disco__container, .disco__container2 {
+    margin: 0rem;
+    padding: 0rem; }
+    .disco__container .disco__div, .disco__container2 .disco__div {
+      width: 28rem; }
+  .disco .imgDisco {
+    width: 5rem; } }
 
 /* FIN MEDIAQUERIE Disco */
 /* INICIO JOURNEY */
@@ -447,7 +552,7 @@ h4 {
     display: flex;
     flex-direction: column; }
     .journey__section .journey__div .journey__p {
-      width: 800px;
+      width: 700px;
       font-family: 'Caveat', cursive;
       font-size: 30px;
       letter-spacing: 2px;
@@ -460,11 +565,7 @@ h4 {
 /* JOURNEY MEDIAQUERIE */
 @media screen and (max-width: 768px) {
   .journey {
-    grid-template-areas: "header header header" "jmain jmain jmain" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "footer footer footer"; }
-  .imgJourney {
-    width: 650px; }
-  .journey__p {
-    width: 700px; } }
+    grid-template-areas: "header header header" "jmain jmain jmain" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "journey__section journey__section journey__section" "footer footer footer"; } }
 
 @media screen and (max-width: 480px) {
   .journey {
@@ -472,9 +573,17 @@ h4 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
     grid-template-areas: "header" "jmain" "journey__section" "journey__section" "journey__section" "footer footer footer "; }
-  .imgJourney {
+  .journey__section h1 {
+    padding: 1rem;
+    margin: 1rem; }
+  .journey__section .journey__intro {
+    font-family: 'Caveat', cursive;
+    margin: 0rem 1rem 1rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
+    font-weight: bold; }
+  .journey__section .imgJourney {
     width: 450px; }
-  .journey__p {
+  .journey__section .journey__div .journey__p {
     width: 450px; } }
 
 /* FIN Journey */
@@ -496,13 +605,17 @@ h4 {
     margin: 20px; }
   .gallery .gallery__img {
     width: 400px; }
+  .gallery .gallery__img:hover {
+    transform: scale(1.5, 1.5);
+    transition: all 1s ease;
+    border: solid 1px rgba(197, 195, 195, 0.246); }
 
 @media screen and (max-width: 768px) {
-  .gallery__img {
-    width: 200px; } }
+  .gallery .gallery__img {
+    width: 320px; } }
 
 @media screen and (max-width: 480px) {
-  .gallery__img {
+  .gallery .gallery__img {
     width: 400px; } }
 
 /* INICIO Fanclub */
@@ -523,7 +636,7 @@ h4 {
     text-align: center; }
     .fcmain .fc__div h1 {
       font-weight: none; }
-    .fcmain .fc__div p {
+    .fcmain .fc__div p, .fcmain .fc__div .track__div .italic, .track__div .fcmain .fc__div .italic {
       font-size: 25px;
       letter-spacing: 2px;
       text-align: center;
@@ -572,11 +685,21 @@ h4 {
   .fanclub {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header  header  header" "fcmain  fcmain fcmain" "sec1fc  sec1fc sec1fc" "sec2fc  sec2fc sec2fc" "footer footer footer"; }
-  .fanclub__form {
-    align-self: center; }
-  .fc__img {
+  .fcmain .fanclub__form {
+    align-self: center;
+    width: 650px; }
+  .sec1fc .fc__img {
     display: none; }
-  .fc__p {
+  .sec1fc .fc__p {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0px 0px 16px 0px; }
+  .sec2fc .fc__img {
+    display: none; }
+  .sec2fc .fc__p {
     font-size: 25px;
     letter-spacing: 2px;
     text-align: center;
@@ -589,10 +712,7 @@ h4 {
     grid-template-columns: 1fr;
     grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
     grid-template-areas: "header" "fcmain" "sec1fc" "sec2fc" "footer"; }
-  .fc__div {
-    display: flex;
-    flex-direction: column; }
-  .fanclub__form {
+  .fcmain .fanclub__form {
     margin: 1rem;
     padding: 0px;
     width: 400px; }
@@ -610,23 +730,82 @@ h4 {
   padding: 20px;
   border-top: solid 1px white;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly; }
-  .footer a {
-    text-decoration: none; }
-  .footer__logo {
-    width: 50px;
-    padding: 0.5rem; }
-
-.label {
-  display: flex;
   flex-direction: column;
   align-items: center; }
-
-.labelLogo {
-  width: 50px;
-  height: 50px;
-  border-radius: 10%; }
+  .footer .footer__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .footer .footer__div .footer__logo {
+      width: 300px; }
+    .footer .footer__div .socialmedia, .footer .footer__div .streaming {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      margin: 2rem; }
+      .footer .footer__div .socialmedia .logos__cap, .footer .footer__div .streaming .logos__cap {
+        font-weight: bold;
+        font-size: 30px; }
+      .footer .footer__div .socialmedia div a, .footer .footer__div .streaming div a {
+        text-decoration: none; }
+      .footer .footer__div .socialmedia div .media__logo, .footer .footer__div .streaming div .media__logo {
+        width: 50px;
+        padding: 0.5rem; }
+      .footer .footer__div .socialmedia div .media__logo2, .footer .footer__div .streaming div .media__logo2 {
+        border-radius: 10px;
+        width: 80px; }
+    .footer .footer__div .label {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 2rem; }
+      .footer .footer__div .label .label__div {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .footer .footer__div .label .label__div h5 {
+          font-weight: bold;
+          font-size: 25px;
+          font-family: 'Over the Rainbow', cursive;
+          padding: 1rem; }
+        .footer .footer__div .label .label__div .labelLogo {
+          width: 70px;
+          height: 70px;
+          border-radius: 10%; }
+        .footer .footer__div .label .label__div .labelLogo2 {
+          width: 50px;
+          height: 50px;
+          border-radius: 10%; }
+  .footer p, .footer .track__div .italic, .track__div .footer .italic {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    color: #8f8f8f;
+    margin: 0; }
 
 /* FIN FOOTER */
+/* MEDIAQUERIES FOOTER */
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 0px; }
+    .footer .footer__div {
+      flex-direction: column;
+      align-items: center; }
+      .footer .footer__div .socialmedia, .footer .footer__div .streaming {
+        margin: 0; }
+      .footer .footer__div .label {
+        margin: 0; }
+        .footer .footer__div .label .label__div {
+          justify-content: center;
+          text-align: center; } }
+
+@media screen and (max-width: 768px) {
+  .footer .footer__div {
+    flex-direction: column;
+    align-items: center; }
+    .footer .footer__div .socialmedia, .footer .footer__div .streaming {
+      margin: 0; }
+    .footer .footer__div .label {
+      margin: 0; } }
