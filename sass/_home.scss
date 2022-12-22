@@ -277,3 +277,13 @@
         @include flex-column-center;
     }
 }
+@media screen and (max-width:450px){
+    .section1{
+        iframe{
+            padding: 0px;
+            width: 300px;
+        }
+    }
+}
+
+/*FIN MEDIAQUERIE HOME*/

@@ -257,6 +257,12 @@ h4 {
     flex-direction: column;
     align-items: center; } }
 
+@media screen and (max-width: 450px) {
+  .section1 iframe {
+    padding: 0px;
+    width: 300px; } }
+
+/*FIN MEDIAQUERIE HOME*/
 /*INIICIO HEADER/NAV*/
 .header {
   grid-area: header;
@@ -501,6 +507,51 @@ h4 {
     padding: 0rem; }
     .disco__container .disco__div, .disco__container2 .disco__div {
       width: 28rem; }
+  .disco .imgDisco {
+    width: 5rem; } }
+
+@media screen and (max-width: 450px) {
+  .container2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "newAlbum" "newAlbumImg" "disco" "disco" "footer "; }
+  .newAlbum {
+    background-color: #010510;
+    color: white;
+    display: flex;
+    flex-direction: column; }
+    .newAlbum .newAlbum__div {
+      display: flex;
+      flex-direction: column; }
+      .newAlbum .newAlbum__div .newAlbum__title {
+        width: 350px;
+        font-family: 'Over the Rainbow', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2rem;
+        margin: 3rem 3rem 0rem 3rem; }
+      .newAlbum .newAlbum__div .newAlbum__cap {
+        width: 400px;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 1rem;
+        margin: 1rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: 'La Belle Aurore', cursive; }
+      .newAlbum .newAlbum__div .newAlbum__cap2 {
+        width: 400px; }
+  .newAlbumImg {
+    background-color: #010510;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem; }
+  .disco h2 {
+    width: 400px; }
+  .disco__container, .disco__container2 {
+    margin: 0rem;
+    padding: 0rem; }
+    .disco__container .disco__div, .disco__container2 .disco__div {
+      width: 25rem; }
   .disco .imgDisco {
     width: 5rem; } }
 
