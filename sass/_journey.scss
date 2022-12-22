@@ -111,4 +111,41 @@
         }
     }
 }
+
+
+
+@media screen and (max-width:450px) {
+    .journey{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+        grid-template-areas:
+        "header"
+        "jmain"
+        "journey__section"
+        "journey__section"
+        "journey__section"
+        "footer footer footer ";
+    }
+    .journey__section{
+        h1{
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .journey__intro{
+            font-family: 'Caveat', cursive;
+            margin: 0rem 1rem 1rem 1rem;
+            padding: 0rem 1rem 1rem 1rem;
+            font-weight: bold;
+        }
+        .imgJourney{
+        width: 350px;
+        }
+        .journey__div{
+            .journey__p{
+                width: 350px;
+            }
+        }
+    }
+}
 /* FIN Journey */

@@ -28,6 +28,7 @@ h4 {
 
 /*Fin*/
 /*VARIABLES*/
+/*INICIO HOME*/
 /*HOME GRID*/
 .home {
   display: grid;
@@ -586,6 +587,25 @@ h4 {
   .journey__section .journey__div .journey__p {
     width: 450px; } }
 
+@media screen and (max-width: 450px) {
+  .journey {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0,3fr 1fr 1fr 1fr 0,3fr;
+    grid-template-areas: "header" "jmain" "journey__section" "journey__section" "journey__section" "footer footer footer "; }
+  .journey__section h1 {
+    padding: 1rem;
+    margin: 1rem; }
+  .journey__section .journey__intro {
+    font-family: 'Caveat', cursive;
+    margin: 0rem 1rem 1rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
+    font-weight: bold; }
+  .journey__section .imgJourney {
+    width: 350px; }
+  .journey__section .journey__div .journey__p {
+    width: 350px; } }
+
 /* FIN Journey */
 /* INICIO Gallery */
 .gallery__banner {
@@ -666,8 +686,8 @@ h4 {
   grid-area: sec2fc;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 .fc__img {
   width: 500px;
@@ -791,6 +811,7 @@ h4 {
   .footer {
     padding: 0px; }
     .footer .footer__div {
+      display: flex;
       flex-direction: column;
       align-items: center; }
       .footer .footer__div .socialmedia, .footer .footer__div .streaming {
@@ -803,6 +824,7 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .footer .footer__div {
+    display: flex;
     flex-direction: column;
     align-items: center; }
     .footer .footer__div .socialmedia, .footer .footer__div .streaming {

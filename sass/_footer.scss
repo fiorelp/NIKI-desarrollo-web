@@ -1,12 +1,15 @@
 /* INICIO FOOTER */
+@mixin flex-column-center{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
 .footer{
     grid-area: footer;
     background-color:#010104;
     padding: 20px;
     border-top:solid 1px white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
     
     .footer__div{
         display: flex;
@@ -16,9 +19,7 @@
             width:300px;
         }
         .socialmedia{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex-column-center;
             padding: 1rem;
             margin: 2rem;
             .logos__cap{
@@ -48,9 +49,7 @@
             justify-content: center;
             margin: 2rem;
             .label__div{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                @include flex-column-center;
                  h5{
                 font-weight: bold;
                 font-size: 25px;
@@ -88,8 +87,7 @@
     .footer{
         padding: 0px;
         .footer__div{
-            flex-direction: column;
-            align-items: center;
+            @include flex-column-center;
             .socialmedia{
                 margin:0;
             }
@@ -106,8 +104,7 @@
 @media screen and (max-width:768px){
     .footer{
         .footer__div{
-            flex-direction: column;
-            align-items: center;
+            @include flex-column-center;
             .socialmedia{
                 margin:0
             }

@@ -1,4 +1,9 @@
-
+/*INICIO HOME*/
+@mixin flex-column-center{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
 /*HOME GRID*/
 .home{
     display:grid;
@@ -47,9 +52,7 @@
     grid-area: section1;
     margin-top: 2rem;
     padding:2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center;
     border-bottom: solid white 1px;
     h2{
         font-family: 'Over the Rainbow', cursive;
@@ -99,9 +102,7 @@
     }
     .tour__dates{
         width: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center;
         justify-content: center;
         text-align: center;
         margin: 2rem;
@@ -273,8 +274,6 @@
         }
     }
     .section2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center;
     }
 }
